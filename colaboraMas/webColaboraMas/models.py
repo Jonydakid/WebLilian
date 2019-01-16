@@ -16,3 +16,5 @@ class Mensaje(models.Model):
     nombre = models.CharField(max_length = 30)
     correo = models.EmailField(max_length = 30)
     mensaje = models.TextField()
+
+    
