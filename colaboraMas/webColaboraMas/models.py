@@ -6,7 +6,7 @@ from django.db import models
 class Curso(models.Model):
     nomCurso = models.CharField(max_length=100)
     descripcion = models.TextField()
-    valor = models.IntegerField(max_length=20)
+    valor = models.IntegerField()
     imagen = models.ImageField(upload_to="cursos", blank=True, null=True)
 
 
