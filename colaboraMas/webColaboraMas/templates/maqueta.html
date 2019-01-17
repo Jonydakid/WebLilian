@@ -1,63 +1,48 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{titulo}} |Colabora+</title>
-    <link href="{% static 'css/estilos.css'%}" rel="stylesheet" type="text/css" media="all">
+
+    
     {%block imports%}
     {%endblock%}
 </head>
+
 <body>
     <!-- Banner -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'index' %}">Indice</a></li>
-                <li><a href="{% url 'aboutus' %}">¿Quienes Somos?</a>
-                    <div>
-                        <ul>
-                            <li><a href="">Misión y Visión</a></li>
-                            <li><a href="">Dirección</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="{% url 'cursos' %}">Cursos</a>
-                    <div>
-                        <ul>
-                            <li><a href="">Manicure</a></li>
-                            <li><a href="">Pestañas</a></li>
-                            <li><a href="">Depilación</a></li>
-                            <li><a href="">Maquillaje</a></li>
-                            <li><a href="">Cuidado del Cutis</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#">Valores y Promociones</a>
-                    <div>
-                        <ul>
-                            <li><a href="">Valores de Cursos</a></li>
-                            <li><a href="">Promociones del Mes</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#">Servicios a Empresas</a>
-                    <div>
-                        <ul>
-                            <li><a href="">Día de Spa para la empresa</a></li>
-                            <li><a href="">Cursos de 8 horas autoimagen y autocuidado sence</a></li>
-                            <li><a href="">Curso de 8 horas automaquillaje</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <img class="navbar-brand"src="{% static 'css/img/logo.png' %}" width="150" height="30" alt="">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'index'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'cursos'%}">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'aboutus'%}">Acerca de nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'contacto'%}">Contactános</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     {%block section%}
     {%endblock%}
 </body>
+
 </html>
