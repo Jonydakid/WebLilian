@@ -12,3 +12,6 @@ def contacto(request):
 
 def aboutus(request):
 	return render(request, "aboutus.html", { "titulo": "Acerca de nosotros" })
+
+def servicioEmpresas(request):
+	return render(request, "servicioEmpresas.html", { "titulo": "Servicios a Empresas"})
