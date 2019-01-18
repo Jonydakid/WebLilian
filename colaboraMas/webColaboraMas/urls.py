@@ -6,5 +6,6 @@ urlpatterns = [
 	url(r"^aboutus/$", views.aboutus, name = "aboutus"),
 	url(r"^cursos/$", views.cursos, name = "cursos"),
 	url(r"^contacto/$", views.contacto, name = "contacto"),
+	url(r"^servicioEmpresas/$", views.servicioEmpresas, name="servicioEmpresas"),
 	url(r"^$", views.index, name = "index"),
 ]
