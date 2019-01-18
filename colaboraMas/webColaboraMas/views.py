@@ -8,7 +8,7 @@ def index(request):
 	return render(request, "index.html", { "titulo": "Index" })
 
 def cursos(request):
-	cursos=Producto.objects.all()
+	cursos=Curso.objects.all()
 	
 	return render(request, "cursos.html", { "titulo": "Cursos", "cursos": cursos })
 
