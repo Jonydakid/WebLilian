@@ -5,5 +5,28 @@
 
 
 {% block section %}
-    <h1>Contactanos</h1>
-{% endblock %}
+<section class="section-services section-t8">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap d-flex justify-content-between">
+                    <form id="contacto" method="POST">
+                        {% csrf_token %}
+                        <table class="tableform">
+                            {% for campo in form %}
+                            <tr>
+                                <th width="20%">{{ campo.label_tag }}</th>
+                                <td width="60%">{{ campo }}</td>
+                                <td width="20%">
+                                    <p id="error_{{ campo.name }}" class="error">{{ campo.errors }}</p>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                        <input type="submit" class="campo boton" value="Enviar" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        {% endblock %}
