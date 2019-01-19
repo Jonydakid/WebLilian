@@ -6,78 +6,50 @@
 
 {% block section %}
    
-<div class="intro intro-carousel">
-    <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-1.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345</p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Mount
-                      <br> Olive Road Two</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="slide-window">
+  <div class="slide-wrapper" style="width: 300%;">
+    <div class="slide">
+      <a href="#">
+        <div class="slide-image" img src="{% static 'img/slide-1' %}">
         </div>
-      </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-2.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345</p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Rino
-                      <br> Venda Road Five</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="slide-caption">
+          <h2>Slide 1</h2>
+          <p>Slide 1 Caption</p>
         </div>
-      </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-3.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345</p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Alira
-                      <br> Roan Road One</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      </a>
+    </div>
+    <div class="slide">
+      <a href="#">
+        <div class="slide-image" img src="{% static 'img/slide-2' %}">
         </div>
-      </div>
+        <div class="slide-caption">
+          <h2>Slide 2</h2>
+          <p>Slide 2 Caption</p>
+        </div>
+      </a>
+    </div>
+    <div class="slide">
+      <a href="#">
+        <div class="slide-image" img src="{% static 'img/slide-3' %}">
+        </div>
+        <div class="slide-caption">
+          <h2>Slide 3</h2>
+          <p>Slide 3 Caption</p>
+        </div>
+      </a>
     </div>
   </div>
+  <div class="slide-controller">
+    <div class="slide-control-left">
+      <div class="slide-control-line"></div>
+      <div class="slide-control-line"></div>
+    </div>
+    <div class="slide-control-right">
+      <div class="slide-control-line"></div>
+      <div class="slide-control-line"></div>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}
