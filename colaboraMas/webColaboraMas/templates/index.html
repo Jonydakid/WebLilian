@@ -5,51 +5,59 @@
 
 
 {% block section %}
-   
-<div class="slide-window">
-  <div class="slide-wrapper" style="width: 300%;">
-    <div class="slide">
-      <a href="#">
-        <div class="slide-image" img src="{% static 'img/slide-1' %}">
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12 section-t8">
+
+          <div class="slide-window">
+              <div class="slide-wrapper" style="width: 300%;">
+                <div class="slide">
+                  <a href="#">
+                    <div class="slide-image"><img src="{% static 'img/slide-1' %}"/>
+                    </div>
+                    <div class="slide-caption">
+                      <h2>Slide 1</h2>
+                      <p>Slide 1 Caption</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="slide">
+                  <a href="#">
+                    <div class="slide-image"><img src="{% static 'img/slide-2' %}"/>
+                    </div>
+                    <div class="slide-caption">
+                      <h2>Slide 2</h2>
+                      <p>Slide 2 Caption</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="slide">
+                  <a href="#">
+                    <div class="slide-image"> <img src="https://eu.battle.net/forums/static/images/game-logos/game-logo-wow.png"/>
+                    </div>
+                    <div class="slide-caption">
+                      <h2>Slide 3</h2>
+                      <p>Slide 3 Caption</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="slide-controller">
+                <div class="slide-control-left">
+                  <div class="slide-control-line"></div>
+                  <div class="slide-control-line"></div>
+                </div>
+                <div class="slide-control-right">
+                  <div class="slide-control-line"></div>
+                  <div class="slide-control-line"></div>
+                </div>
+              </div>
+      
         </div>
-        <div class="slide-caption">
-          <h2>Slide 1</h2>
-          <p>Slide 1 Caption</p>
-        </div>
-      </a>
-    </div>
-    <div class="slide">
-      <a href="#">
-        <div class="slide-image" img src="{% static 'img/slide-2' %}">
-        </div>
-        <div class="slide-caption">
-          <h2>Slide 2</h2>
-          <p>Slide 2 Caption</p>
-        </div>
-      </a>
-    </div>
-    <div class="slide">
-      <a href="#">
-        <div class="slide-image" img src="{% static 'img/slide-3' %}">
-        </div>
-        <div class="slide-caption">
-          <h2>Slide 3</h2>
-          <p>Slide 3 Caption</p>
-        </div>
-      </a>
-    </div>
   </div>
-  <div class="slide-controller">
-    <div class="slide-control-left">
-      <div class="slide-control-line"></div>
-      <div class="slide-control-line"></div>
-    </div>
-    <div class="slide-control-right">
-      <div class="slide-control-line"></div>
-      <div class="slide-control-line"></div>
-    </div>
-  </div>
+  
 </div>
+
 
 
 {% endblock %}
