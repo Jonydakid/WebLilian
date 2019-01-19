@@ -13,20 +13,23 @@
                     <form id="contacto" method="POST">
                         {% csrf_token %}
                         <table class="tableform">
-                            {% for campo in form %}
-                            <tr>
-                                <th width="20%">{{ campo.label_tag }}</th>
-                                <td width="60%">{{ campo }}</td>
-                                <td width="20%">
-                                    <p id="error_{{ campo.name }}" class="error">{{ campo.errors }}</p>
-                                </td>
-                            </tr>
-                            {% endfor %}
+                            <div class="form-group">
+                                {% for campo in form %}
+                                <tr>
+                                    <th width="20%">{{ campo.label_tag }}</th>
+                                    <td width="60%">{{ campo }}</td>
+                                    <td width="20%">
+                                        <p id="error_{{ campo.name }}" class="error">{{ campo.errors }}</p>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+
                         </table>
                         <input type="submit" class="campo boton" value="Enviar" />
                     </form>
                 </div>
             </div>
         </div>
-        
+
         {% endblock %}

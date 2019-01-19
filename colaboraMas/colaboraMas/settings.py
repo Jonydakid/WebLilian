@@ -122,9 +122,15 @@ STATIC_URL = "/static/"
 
 MEDIA_URL = "/media/"
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, STATIC_URL)
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL)
 
-STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
+
 
 # SMTP
 EMAIL_HOST = "smtp.gmail.com"
