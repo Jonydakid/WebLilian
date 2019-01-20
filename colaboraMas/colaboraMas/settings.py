@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webColaboraMas.apps.WebcolaboramasConfig'
 ]
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -121,6 +126,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 MEDIA_URL = "/media/"
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, STATIC_URL)
