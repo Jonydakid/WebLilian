@@ -12,6 +12,10 @@ def cursos(request):
 	
 	return render(request, "cursos.html", { "titulo": "Cursos", "cursos": cursos })
 
+def showCurso(request, idCurso):
+	curso=Curso.objects.get(nomCurso=idCurso)
+	return render(request,"curso.html",{"titulo": curso.nomCurso,"curso":curso})
+
 def contacto(request):
 	if request.method == "POST":
 		form = FormContacto(request.POST)
@@ -21,7 +25,7 @@ def contacto(request):
 			curso = data.get("curso")
 			correo=data.get("correo")
 			mensaje = data.get("mensaje")
-			Mensaje.objects.create(nombre, curso ,correo, mensaje)
+			Mensaje.objects.create(nombre=nombre, curso=curso ,correo=correo, mensaje=mensaje)
 			send_mail(
 				"Contacto Empresa",
 				f"Estimada(o) {nombre} ,Gracias por contactar con nosotras...",

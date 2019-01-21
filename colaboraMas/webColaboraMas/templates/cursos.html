@@ -1,33 +1,92 @@
 {% extends "maqueta.html" %}
 {%load static%}
 
-
-
-
 {% block section %}
-    {% if cursos %}
-    <section class="section-services section-t8">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="title-wrap d-flex justify-content-between">
-                <div class="title-box">
-                  <h2 class="title-a">Cursos</h2>
+{% if cursos %}
+
+<section class="intro-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <div class="title-single-box">
+          <h1 class="title-single">Cursos</h1>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Cursos
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="property-grid grid">
+
+  <div class="container">
+    <div class="row">
+      {%for curso in cursos%}
+      <div class="col-md-4">
+        <div class="card-box-a card-shadow">
+          <div class="img-box-a">
+            <img src="http://www.magnifiquespa.cl/wp-content/uploads/2017/07/4.1-600x600.jpg" alt="" class="img-a img-fluid">
+          </div>
+          <div class="card-overlay">
+            <div class="card-overlay-a-content">
+              <div class="card-header-a">
+                <h2 class="card-title-a">
+                  <a href="#">Curso de {{curso.nomCurso}}</a>
+                </h2>
+              </div>
+              <div class="card-body-a">
+                <div class="price-box d-flex">
+                  <span class="price-a">Valor | {{curso.valor}}</span>
                 </div>
+                <a href="{% url 'showCurso' idCurso=curso.idCurso %}" class="link-a">Ver
+                  <span class="ion-ios-arrow-forward"></span>
+                </a>
+              </div>
+              <div class="card-footer-a">
+                <ul class="card-info d-flex justify-content-around">
+                  <li>
+                    <h4 class="card-info-title">Descripción</h4>
+                    <span>{{curso.descripcion}}
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-    {%else%}
-    <section class="section-services section-t8">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="title-wrap d-flex justify-content-between">
-                <div class="title-box">
-                  <h2 class="title-a">Nada para mostrar</h2>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+
+
+</section>
+
+
+{%else%}
+<section class="section-services section-t8">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-wrap d-flex justify-content-between">
+          <div class="title-box">
+            <h2 class="title-a">Nada para mostrar</h2>
           </div>
-    {%endif%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%endif%}
 {% endblock %}

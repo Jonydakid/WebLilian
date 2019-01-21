@@ -1,0 +1,56 @@
+{% extends "maqueta.html" %}
+{%load static%}
+
+{% block section %}
+<section class="property-single nav-arrow-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
+                    <div class="carousel-item-b">
+                        <img src="http://www.magnifiquespa.cl/wp-content/uploads/2017/07/4.1-600x600.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-md-5 col-lg-4">
+                        <div class="property-price d-flex justify-content-center foo">
+                            <div class="card-header-c d-flex">
+                                <div class="card-box-ico">
+                                    <span class="ion-money">$</span>
+                                </div>
+                                <div class="card-title-c align-self-center">
+                                    <h5 class="title-c">{{curso.valor}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-7 section-md-t3">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="title-box-d">
+                                <h3 class="title-d">Descripción del curso</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-description">
+                        <p class="description color-text-a">
+                            {{curso.descripcion}} ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                            Donec velit
+                            neque, auctor sit amet
+                            aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta.
+                            Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt
+                            nibh pulvinar quam id dui posuere blandit.
+                        </p>
+                        <p class="description color-text-a no-margin">
+                            Valor: {{curso.valor}}
+                           </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+{%endblock%}
