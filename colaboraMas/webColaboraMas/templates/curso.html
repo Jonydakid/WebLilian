@@ -2,6 +2,33 @@
 {%load static%}
 
 {% block section %}
+<section class="intro-single">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-8">
+                <div class="title-single-box">
+                    <h1 class="title-single">{{curso.nomCurso}}</h1>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+                <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Cursos
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            {{curso.nomCurso}}
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="property-single nav-arrow-b">
     <div class="container">
         <div class="row">
@@ -35,16 +62,14 @@
                     </div>
                     <div class="property-description">
                         <p class="description color-text-a">
-                            {{curso.descripcion}} ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                            {{curso.descripcion}} ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                            Curae;
                             Donec velit
                             neque, auctor sit amet
                             aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta.
                             Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt
                             nibh pulvinar quam id dui posuere blandit.
                         </p>
-                        <p class="description color-text-a no-margin">
-                            Valor: {{curso.valor}}
-                           </p>
                     </div>
                 </div>
             </div>

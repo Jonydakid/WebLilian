@@ -13,7 +13,7 @@ def cursos(request):
 	return render(request, "cursos.html", { "titulo": "Cursos", "cursos": cursos })
 
 def showCurso(request, idCurso):
-	curso=Curso.objects.get(nomCurso=idCurso)
+	curso=Curso.objects.get(idCurso=idCurso)
 	return render(request,"curso.html",{"titulo": curso.nomCurso,"curso":curso})
 
 def contacto(request):
