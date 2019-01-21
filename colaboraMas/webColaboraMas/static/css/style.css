@@ -106,6 +106,10 @@ a:hover {
   margin: 0;
 }
 
+/*------/ Aboutus  /------*/
+
+
+
 /*------/ Nav Pills  /------*/
 
 .nav-pills-a.nav-pills .nav-link {
@@ -1141,11 +1145,24 @@ arrowLineRotationRev {  to {
   padding: 12rem 0 3rem;
 }
 
+.intro-single-2 {
+  padding: 0;
+  padding-bottom: 25px;
+}
+
 .intro-single .title-single-box {
   padding: 1rem 0 1rem 2rem;
 }
 
+.intro-single-2 .title-single-box {
+  padding: 1rem 0 1rem 2rem;
+}
+
 .intro-single .title-single-box {
+  border-left: 3px solid #6d2c6d;
+}
+
+.intro-single-2 .title-single-box {
   border-left: 3px solid #6d2c6d;
 }
 
@@ -1154,11 +1171,26 @@ arrowLineRotationRev {  to {
   font-size: 2.2rem;
 }
 
+.intro-single-2 .title-single-box .title-single {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
 .intro-single .breadcrumb-box {
   padding: 1rem 0 0 .5rem;
 }
 
+.intro-single-2 .breadcrumb-box {
+  padding: 1rem 0 0 .5rem;
+}
+
 .intro-single .breadcrumb {
+  background-color: transparent;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.intro-single-2 .breadcrumb {
   background-color: transparent;
   padding-right: 0;
   padding-left: 0;
