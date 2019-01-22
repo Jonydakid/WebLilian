@@ -9,7 +9,7 @@ class Curso(models.Model):
     nomCurso = models.CharField(max_length=100)
     descripcion = models.TextField()
     valor = models.IntegerField()
-    imagen = models.ImageField(upload_to="/staticImg/", blank=True, null=True)
+    imagen = models.ImageField(upload_to="staticImg", blank=True, null=True)
 
 
 class Mensaje(models.Model):

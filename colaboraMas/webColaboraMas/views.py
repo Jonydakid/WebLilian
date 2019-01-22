@@ -23,14 +23,14 @@ def contacto(request):
 			data = form.cleaned_data
 			nombre= data.get("nombre")
 			curso = data.get("curso")
-			correo=data.get("correo")
 			mensaje = data.get("mensaje")
-			Mensaje.objects.create(nombre=nombre, curso=curso ,correo=correo, mensaje=mensaje)
+			cor=[data.get("correo")]
+			Mensaje.objects.create(nombre=nombre, curso=curso ,correo=data.get("correo"), mensaje=mensaje)
 			send_mail(
 				"Contacto Empresa",
 				f"Estimada(o) {nombre} ,Gracias por contactar con nosotras...",
 				"donotreplyEmpresa@gmail.com",
-				correo,
+				cor,
 				fail_silently = True
 			)
 			return redirect("contacto")
