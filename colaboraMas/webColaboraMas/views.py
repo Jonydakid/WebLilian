@@ -24,12 +24,13 @@ def contacto(request):
 			nombre= data.get("nombre")
 			curso = data.get("curso")
 			mensaje = data.get("mensaje")
-			cor=[data.get("correo")]
+			cor=[data.get("correo"),"jonathan.torres.salvo@gmail.com"]
 			Mensaje.objects.create(nombre=nombre, curso=curso ,correo=data.get("correo"), mensaje=mensaje)
 			send_mail(
-				"Contacto Empresa",
-				f"Estimada(o) {nombre} ,Gracias por contactar con nosotras...",
-				"donotreplyEmpresa@gmail.com",
+				"Contacto Talento y Belleza",
+				f"Estimada(o) {nombre} ,Gracias por contactar con nosotras\n Acaba de realizar una consulta acerca de"+
+				f"nuestro curso de {curso}\n cuyo mensaje fue '{mensaje}'",
+				"donotreplytalentoybelleza@gmail.com",
 				cor,
 				fail_silently = True
 			)
