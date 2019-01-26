@@ -8,5 +8,6 @@ urlpatterns = [
 	url(r"^cursos/(?P<idCurso>[0-9_]+)$", views.showCurso, name="showCurso"),
 	url(r"^contacto/$", views.contacto, name = "contacto"),
 	url(r"^servicioEmpresas/$", views.servicioEmpresas, name="servicioEmpresas"),
+	url(r"^promociones/$", views.promociones, name="promociones"),
 	url(r"^$", views.index, name = "index"),
 ]

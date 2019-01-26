@@ -45,3 +45,6 @@ def aboutus(request):
 
 def servicioEmpresas(request):
 	return render(request, "servicioEmpresas.html", { "titulo": "Servicios a Empresas"})
+
+def promociones(request):
+    return render(request, "promociones.html", { "titulo": "Promociones" })
