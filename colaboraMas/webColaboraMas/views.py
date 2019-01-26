@@ -3,6 +3,8 @@ from .forms import FormContacto
 from django.core.mail import send_mail
 from .models import Mensaje, Curso
 
+
+
 # Create your views here.
 def index(request):
 	return render(request, "index.html", { "titulo": "Index" })
@@ -44,7 +46,8 @@ def aboutus(request):
 	return render(request, "aboutus.html", { "titulo": "Acerca de nosotros" })
 
 def servicioEmpresas(request):
-	return render(request, "servicioEmpresas.html", { "titulo": "Servicios a Empresas"})
+	
+	return render(request, "servicioEmpresas.html", { "titulo": "Servicio a empresas"})
 
 def promociones(request):
     return render(request, "promociones.html", { "titulo": "Promociones" })

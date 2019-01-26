@@ -3,12 +3,15 @@ import os
 
 # Create your models here.
 
+class Categoria(models.Model):
+    idCategoria=models.AutoField(primary_key=True)
+    nombre=models.CharField(max_length=30)
+    objetivo=models.CharField(max_length=150)
 
 class Curso(models.Model):
     idCurso=models.AutoField(primary_key=True)
     nomCurso = models.CharField(max_length=100)
-    objetivo=models.CharField(max_length = 150)
-    categoria=models.CharField(max_length=50)
+    categoria = models.ForeignKey(Categoria, on_delete = models.DO_NOTHING)
     totalHrs=models.IntegerField()
     horaDiurno=models.CharField(max_length=20)
     horaVespertino=models.CharField(max_length=20)
