@@ -44,14 +44,38 @@
         <a class="navbar-brand text-brand" href="{% url 'index' %}">Belleza &<span class="color-b"> Talento</span></a>
         <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="{% url 'aboutus' %}">¿Quienes Somos?</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                ¿Quienes Somos?
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'aboutus' %}">Misión y Visión</a>
+                <a class="dropdown-item" href="{% url 'aboutus' %}">Dirección</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'cursos'%}">Cursos</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Cursos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'cursos' %}">Manicure</a>
+                <a class="dropdown-item" href="{% url 'cursos' %}">Pestañas</a>
+                <a class="dropdown-item" href="{% url 'cursos' %}">Depilación</a>
+                <a class="dropdown-item" href="{% url 'cursos' %}">Maquillaje</a>
+                <a class="dropdown-item" href="{% url 'cursos' %}">Cuidado del Cutis</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'promociones'%}">Valores y Promociones</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Valores y Promociones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'promociones' %}">Valores de cursos</a>
+                <a class="dropdown-item" href="{% url 'promociones' %}">Promociones del mes</a>
+              </div>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
